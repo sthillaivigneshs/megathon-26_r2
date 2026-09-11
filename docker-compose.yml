@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:16
+    container_name: reloop-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: reloop
+    ports:
+      - "5432:5432"
+    volumes:
+      - reloop_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d reloop"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  reloop_data:

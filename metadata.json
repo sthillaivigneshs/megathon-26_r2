@@ -1,0 +1,6 @@
+{
+  "name": "ReLoop - E-Waste Circularity & EPR Platform",
+  "description": "Offline-first digital platform connecting citizens, informal e-waste collectors, recyclers, and brands into a trusted digital chain of custody with EPR compliance.",
+  "requestFramePermissions": ["camera", "microphone", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
